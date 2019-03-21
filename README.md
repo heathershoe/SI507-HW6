@@ -120,25 +120,32 @@ function handleClick(){
 ```js
 <button onclick=handleClick() id="wow-button">Wow</button>
 ```
+The first part of this code defines a function called handleClick. When the function is called an alert (pop up window) with the text "hello" will appear.
 
+The second part of this code is saying when the button called "Wow" is clicked, the function handleClick should be called.
 
 
 * **Knowing what you learned from the previous question, add code/markup to the `jsPracticeLab.html` file *so that* there is a button with the text `Spring Equinox 2019` on it somewhere on the page, and when that button is clicked, a text box containing the text `March 20, 2019` appears. (There's no function -- that I am aware of -- to automatically get this info, you've got to type it yourself.)**
 
-
+Done. Lines 36-38 (function) and line 79 (button).
 
 ### The next few questions address the `jquerylib_submit_example.html` file.
 
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
+The error message is red because it is tagged "class = error" and the style section dictates that things with that class are red. The valid response is tagged "good" which the style section indicates should be blue.
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+I think this is making everything lower case and allowing (or not allowing) certain characters. Going to Google "var regex = /^[a-zA-Z]+$/; javascript"
+
+Okay. a-zA-A is the entire alphabet, capital or lower cased. And the +$/ is to allow spaces.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
+The else statement is indented. The statements being compared are in parenthesis.
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
-
+Time. Probably milliseconds? Definitely not seconds.
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
 ```js
@@ -146,6 +153,8 @@ $(document).ready(function(){
     $("form").submit(function(event){
 ```
 
+I'm not entirely sure, but this is what I think is going on.
+document refers to the page is my browser and .ready(function) is from the jquery library to something. A Google search 
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
