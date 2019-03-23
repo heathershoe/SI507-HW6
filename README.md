@@ -112,7 +112,7 @@ The first half of this statement is setting up the variable name that will be us
 The second half is getting the value: find the elements with the tag 'li' then get the length of that query. Similar to Python len(), but .length goes at the end.
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
-It would be white (which appears to be the default). The style of the body is modified to be neon green in the JavaScript section of the code (line 22) and is not defined at all in the style section. 
+It would be white (which appears to be the default). The style of the body is modified to be neon green in the JavaScript section of the code (line 22) and is not defined at all in the style section.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
 The javascript modifies the body of the document to green, but the grey boxes appear because they are tagged <p> which has a different style defined.
@@ -151,13 +151,14 @@ The error message is red because it is tagged "class = error" and the style sect
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
 I think this is making everything lower case and allowing (or not allowing) certain characters. Going to Google "var regex = /^[a-zA-Z]+$/; javascript"
 
-Okay. a-zA-A is the entire alphabet, capital or lower cased. And the +$/ is to allow spaces.
+Okay, I was wrong. a-zA-A is the entire alphabet, capital or lower cased. And the +$/ is to allow spaces. So this is saying that when used as a test, var regex will be true for any input that is composed of only letters A-Z, capital or lower case, and spaces. Special characters (!@.,) and numbers would be false.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
 The else statement is indented. The statements being compared are in parenthesis.
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
-Time. Probably milliseconds? Definitely not seconds.
+Time. Probably in milliseconds. Definitely not seconds.
+
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
 
 ```js
