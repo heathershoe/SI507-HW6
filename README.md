@@ -73,18 +73,23 @@ Some JavaScript code
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
+
 A code comment is greyed out, same as a comment in Python, but they are preceded by // (instead of #).
 
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
+
 To "run" a JavaScript program you open it using a web browser.
 
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
+
 alert - This generates a pop up message
+
 console.log - This makes a comment in the console, which is accessed by Inspect Element then switching to Console (using Firefox). This is similar to using print statements in Flask--they aren't visible in the web browser, but are visible in bash.
 
 I would use alert if I wanted the average/"normal" user to read the message and console.log if there was something I needed to communicate to other programmers or developers.
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
+
 To get ride of the pop up box, comment out line 12
 ```js
 alert("hello")
@@ -96,9 +101,11 @@ alert(new Date());
 ```
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
+
 In the displayInformation function change the h1 (header) line from "A name" to "Heather Shoecraft" (line 17).
 
 * **What does the word `document` represent in this code? Explain briefly.**
+
 I believe document represents the page that is viewed in the web browser. It seems similar to creating classes with self.xyz, where document.xyz has specific parts to it which, as a whole, are one document.
 
 * **What is happening in line 12 (
@@ -112,12 +119,15 @@ The first half of this statement is setting up the variable name that will be us
 The second half is getting the value: find the elements with the tag 'li' then get the length of that query. Similar to Python len(), but .length goes at the end.
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
+
 It would be white (which appears to be the default). The style of the body is modified to be neon green in the JavaScript section of the code (line 22) and is not defined at all in the style section.
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+
 The javascript modifies the body of the document to green, but the grey boxes appear because they are tagged <p> which has a different style defined.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
+
 I used a lot of trial and error to figure this out. My goal was to model it after the hightlight/copy code for University of Michigan. First I needed to write a function that would be executed when McGill University was copied. The function is defined on lines 32-34.
 
 Next, I needed to modify the list so that when the copy action took place, the function would be called. See line 74.
@@ -126,7 +136,15 @@ Finally I duplicated line 78 and modified it to the below statement.
 ```js
 	<div id="canada">
 ```
-Something didn't seem to be working quite right as Go blue! was appearing below my Wow and Equinox buttons, but O Canada was appearing before them. Then I realized that after each <div> I needed </div> (there was currently only one in my code). Fixed that and now both messages appear above the buttons.
+Something didn't seem to be working quite right as Go blue! was appearing below my Wow and Equinox buttons, but O Canada was appearing before them. Then I realized that after each
+```js
+<div>
+```
+I needed to include
+```js
+</div>
+```
+(there was currently only one in my code). Fixed that and now both messages appear above the buttons.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
@@ -154,17 +172,21 @@ Done. Lines 36-38 (function) and line 79 (button).
 * **Check out the file `jquerylib_submit_example.html`. This is an example of code that uses a package called `jQuery` (and this will need you to have an internet connection to run it properly, although the other file does not). Check out resources above for more on jQuery!**
 
 * **When you enter input that isn't valid, you see an error that is red. Why is the error in red? Why is the response for valid inputs blue?**
+
 The error message is red because it is tagged "class = error" and the style section dictates that things with that class are red. The valid response is tagged "good" which the style section indicates should be blue.
 
 * **What is this line `var regex = /^[a-zA-Z]+$/;` helping with? And if you googled something to figure that out, what did you google, and what, briefly, did you learn? (If you didn't need to google, you can leave that out, but explain briefly what that line is helping the program do, anyway.)**
+
 I think this is making everything lower case and allowing (or not allowing) certain characters. Going to Google "var regex = /^[a-zA-Z]+$/; javascript"
 
 Okay, I was wrong. a-zA-A is the entire alphabet, capital or lower cased. And the +$/ is to allow spaces. So this is saying that when used as a test, var regex will be true for any input that is composed of only letters A-Z, capital or lower case, and spaces. Special characters (!@.,) and numbers would be false.
 
 * **What's different about the syntax of conditional statements in JavaScript, compared to Python?**
+
 The else statement is indented. The statements being compared are in parenthesis.
 
 * **What do you think the `10000` refers to in the code `.fadeOut(10000)`?**
+
 Time. Probably in milliseconds. Definitely not seconds.
 
 * **What do you think is going on with the following code at the beginning of the program? Note that the most important thing to do for answering this question is to be thoughtful and clear, not to be absolutely correct:**
