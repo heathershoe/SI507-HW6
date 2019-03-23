@@ -118,7 +118,15 @@ It would be white (which appears to be the default). The style of the body is mo
 The javascript modifies the body of the document to green, but the grey boxes appear because they are tagged <p> which has a different style defined.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
-Model it after the hightlight/copy code for umich and go Blue
+I used a lot of trial and error to figure this out. My goal was to model it after the hightlight/copy code for University of Michigan. First I needed to write a function that would be executed when McGill University was copied. The function is defined on lines 32-34.
+
+Next, I needed to modify the list so that when the copy action took place, the function would be called. See line 74.
+
+Finally I duplicated line 78 and modified it to the below statement.
+```js
+	<div id="canada">
+```
+Something didn't seem to be working quite right as Go blue! was appearing below my Wow and Equinox buttons, but O Canada was appearing before them. Then I realized that after each <div> I needed </div> (there was currently only one in my code). Fixed that and now both messages appear above the buttons.
 
 * **In the original code, when you click the button that says `Wow`, you see a text box! Wow. Explain briefly in your own words why the following code causes that to happen:**
 
