@@ -153,8 +153,11 @@ $(document).ready(function(){
     $("form").submit(function(event){
 ```
 
-I'm not entirely sure, but this is what I think is going on.
-document refers to the page is my browser and .ready(function) is from the jquery library to something. A Google search 
+I'm not entirely sure, but this is what I think is going on: document refers to the page is my browser and .ready(function) is from the jquery library to something. A Google search of ".ready(function) + jquery" indicates that .ready is a method that can be called on the document to make a function available after the page is loaded. So I think that means that the indented text below this line should still be available after the page is loaded. And I think that makes sense because I would want to be able to submit the form, as mentioned on the next line after the page has loaded in my browser. This is a bit different to the other forms that we have seen where submitting the form directs to a new page. In this case, the same document and the ability to submit the form again and again remains.
+
+The second line is saying when the form is submitted to execute the following lines of code. The following lines of code are the conditional statements which check if the text entered in the form is considered valid or invalid.
 
 * **Add some code to the `jquerylib_submit_example.html` file so that, if the input is valid and is specifically the text `hello`, rather than the visible output being `Nice!` in blue, the visible output should be `Hello to you too!`, also in blue, just like `Nice!` is.**
 	* *HINT:* You'll have to make some changes to the conditional statement, and possibly look up some JavaScript conditional syntax. You'll also need to look carefully at what generates visible output right now.
+
+Lines 24-25
