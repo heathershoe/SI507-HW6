@@ -73,37 +73,49 @@ Some JavaScript code
 ```
 
 * **What does a code comment look like in JavaScript? What character/s do you have to put before a comment?**
-Comments are greyed out and preceded by //
+A code comment is greyed out, same as a comment in Python, but they are preceded by // (instead of #).
+
 * **Explain what needs to happen to get a JavaScript program to "run", given the JavaScript you've seen in this assignment.**
-It is opened in a web browser
+To "run" a JavaScript program you open it using a web browser.
+
 * **What functions in JavaScript seem to be similar in function to the `print` function in Python? (There are two.) Why might you use one and not the other? Explain briefly.**
-alert - pop up message
-console.log - kind of like using print statement used in flask. It doesn't show of for the "normal" user, just in places that developer would be looking
+alert - This generates a pop up message
+console.log - This makes a comment in the console, which is accessed by Inspect Element then switching to Console (using Firefox). This is similar to using print statements in Flask--they aren't visible in the web browser, but are visible in bash.
+
+I would use alert if I wanted the average/"normal" user to read the message and console.log if there was something I needed to communicate to other programmers or developers.
 
 * **What code would have to comment out to get rid of the pop-up box when you load the page? (Related to the last question.) Do that in the code file, and then, add code so that a text box will appear that contains the current date and time! *HINT:* Look through the rest of the code first...**
-line 12 alert("hello")
+To get ride of the pop up box, comment out line 12
+```js
+alert("hello")
+```
 
+I added the following on line 13 (and also learned that spaces are okay (new Date)).
+```js
 alert(new Date());
-also learned that you can have spaces in things
+```
 
 * **How can you put your own name at the top where it currently says "A name"? Explain very briefly how to do so, and replace `A name` in the web page with your own name.**
-In the displayInformation function change the h1 (header) line from "A name" to "Heather Shoecraft"
+In the displayInformation function change the h1 (header) line from "A name" to "Heather Shoecraft" (line 17).
 
 * **What does the word `document` represent in this code? Explain briefly.**
-document represents the page that is viewed in the web browser (?). It seems similar to creating classes with self.xyz, where document.xyz has specific parts to it which, as a whole, are one document.
+I believe document represents the page that is viewed in the web browser. It seems similar to creating classes with self.xyz, where document.xyz has specific parts to it which, as a whole, are one document.
 
 * **What is happening in line 12 (
 		`document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length`
 )? Explain, briefly (<= 2 sentences).**
+```js
 document.querySelector('#items').innerHTML = document.getElementsByTagName('li').length
+```
 
-The first half of this statement is setting up the variable name that will be used in the CSS
-the second half is getting the value, find the elements with the tag 'li' then get the length of that query. Similar to len(items_tagged_li), but .length goes at the end.
+The first half of this statement is setting up the variable name that will be used in the CSS.
+The second half is getting the value: find the elements with the tag 'li' then get the length of that query. Similar to Python len(), but .length goes at the end.
 
 * **What color would the background of this page be <u>if there were no JavaScript in this page</u>?**
-It would be the same green that it currently is. The style section is outside of the JavaScript section of the code.
+It would be white (which appears to be the default). The style of the body is modified to be neon green in the JavaScript section of the code (line 22) and is not defined at all in the style section. 
 
 * **Why are there a couple of gray boxes on the screen with a different colored border? How could you edit this code to make them a different color? Explain briefly. Then edit the code to make those boxes some shade of blue, of your choosing.**
+The javascript modifies the body of the document to green, but the grey boxes appear because they are tagged <p> which has a different style defined.
 
 * **Edit the code so that, if you highlight `McGill University` and copy it, you see the text `O Canada` near the bottom of the page. Briefly explain why you made the edits that you did -- how did you know/figure out what to do?**
 Model it after the hightlight/copy code for umich and go Blue
